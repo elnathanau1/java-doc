@@ -199,7 +199,7 @@ Arithmetic operators are used to do math in Java.
 | % | Modulo    | Find the division remainder     | `2 % 2` | `0` |
 
 ---
-Note: when dividing integers, any decimal created is dropped. For example:
+**Note**: when dividing integers, any decimal created is dropped. For example:
 ```java
 int a = 3;
 int b = 2;
@@ -247,6 +247,8 @@ There are times when you would like to compare two values instad of manipulating
 | >=  | Greater than or equal to  | 1 >= 1 | true |
 | <=  | Less than or equal to     | 1 <= 1 | true |
 
+**Note**: Note the difference between assignment `=` and equal to `==`. This is a very common mistake that your IDE may not point out.
+
 ### Logical
 
 Logical operators are used to determine logic of comparisons and values. Like comparison operators, the result of a logical operator is a boolean. All of the examples below equate to `true`.
@@ -271,8 +273,6 @@ version control| system that records changes to a file or set of files over time
 
 
 # Additional Resources
----
-
 - [CodingBat](https://codingbat.com/java)
 
  Extra practice writing Java methods.
