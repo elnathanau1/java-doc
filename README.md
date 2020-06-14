@@ -7,6 +7,7 @@
     - [Basic Terms](#basic-terms)
     - [Git Commands](#git-commands)
     - [Git Cheatsheet](#git-cheatsheet)
+- [Java](#java)
 - [Glossary](#glossary)
 - [Additional Resources](#additional-resources)
 
@@ -34,6 +35,7 @@ While not necessary in learning how to program, Git is essential in becoming a g
 - Merge conflict: When two people attempt to edit the same code file. Github can try to auto resolve these, however if they are complicated, they can be resolved in IntelliJ
 - Branch: A set of code changes with a unique name. The main branch in every project is called `master`. `master` is typically production-ready code, so try not to push broken code into it.
 - Pull Request (PR): A request to merge the code changes from a branch into `master`.
+- `.gitignore`: This is a file where you can put the names of other files/directories that you don't want Git to track changes for.
 
 
 #### Git Commands
@@ -77,13 +79,43 @@ git fetch
 git merge origin/master
 ```
 
-## Glossary
+# Java
+Java is a programming language that has been around since 1995 that is mainly used for backend applications. Java programs are run on the Java Virtual Machine (JVM) which allows it to be built/compiled once, regardless of the end users operating system. 
+
+## Variables, Data Types, and Math Operators
+
+### Variables
+---
+
+Variables are items that hold a value which we can use somewhere in our application. Variables are created or "declared" and are then assigned a value. In Java the standard is to name variables using camel case. Camel case means that the name should start with a lower case letter and any subsequent word should be capitalized. Numbers are allowed, but not as the first character of the variable.
+
+
+| camel case  |  not camel case |
+|---|---|
+|  myVar |  MyVar |
+|  var1 | myvar  |
+|  apple2Oranges | 1Var  |
+
+Declaring a variable in java looks like this:
+```java
+int myVar = 100;
+```
+This will create a variable named myVar that has a value of 100. If you want to change/reassign the value of `myVar` all you need to do is set it to a new value like so:
+
+```java
+myVar = 2;
+```
+
+`myVar` will now hold 2 instead of 100.
+
+
+# Glossary
 Term | Definition | Example | Notes
 --- | --- | --- | ---
 version control| system that records changes to a file or set of files over time so that you can recall specific versions later | If you write bad code and want to revert back to a old working version, version control allows you to do that |
 
 
-## Additional Resources
+# Additional Resources
 - [CodingBat](https://codingbat.com/java)
 
  Extra practice writing Java methods.
