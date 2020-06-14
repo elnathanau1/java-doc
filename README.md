@@ -4,6 +4,9 @@
 - [Tools and Setup](#tools-and-setup)
   - [Tools to install](#tools-to-install)
   - [Git](#git)
+    - [Basic Terms](#basic-terms)
+    - [Git Commands](#git-commands)
+    - [Git Cheatsheet](#git-cheatsheet)
 - [Glossary](#glossary)
 - [Additional Resources](#additional-resources)
 
@@ -29,6 +32,8 @@ While not necessary in learning how to program, Git is essential in becoming a g
 - Repository (repo): location where code and projects are stored in Git.
 - Commit: individual change to a file (or set of files). This is how Github keeps track of which changes were made when and by who
 - Merge conflict: When two people attempt to edit the same code file. Github can try to auto resolve these, however if they are complicated, they can be resolved in IntelliJ
+- Branch: A set of code changes with a unique name. The main branch in every project is called `master`. `master` is typically production-ready code, so try not to push broken code into it.
+- Pull Request (PR): A request to merge the code changes from a branch into `master`.
 
 
 #### Git Commands
@@ -36,12 +41,41 @@ Command | What it does | Notes
 --- | --- | ---
 `git init` | Create empty Git repo in specified directory | 
 `git clone <repo>` | Downloads a copy of a repo in specified directory |
+`git status` | Lists which files have been changed or staged for commit | 
 `git add <directory>` | Stages all changes in `<directory>` for next commit. `<directory>` can be replaced with <file> to just stage a single file. | `git add .` will stage all files
 `git commit -m "<message>"` | Commit the staged changes, using "<message>" as commit message | Remember to use `-m "<message>"` - otherwise an in-terminal text editor will open. 
 `git push` | Pushes any staged commits to current branch | 
 `git pull` | Downloads any changes to the repo online | Note: This may cause merge conflicts
 `git reset --hard HEAD` | Undo all local changes to repo | 
-
+`git branch` | Lists all the branches in repo | Add `<branch>` argument to create new branch with name `<branch>`
+`git checkout -b <branch>` | Create and check out new branch named `<branch>` | Drop the `-b` argument to check out an existing branch
+  
+#### Git Cheatsheet
+These are some useful command flows for general usage:
+- Flow for pushing local changes to online repo
+```
+git status
+git add <files to be added>
+git commit -m "<commit message>"
+git push
+```
+- Undo all changes in local branch and switch to `master` branch
+```
+git reset --hard HEAD
+git checkout master
+```
+- After a PR is merged to `master`:
+  - check out `master`
+  - pull recent changes
+```
+git checkout master
+git pull
+```
+- Merge `master` branch changes into local branch - note: this may cause merge conflicts that need to be fixed in IntelliJ
+```
+git fetch
+git merge origin/master
+```
 
 ## Glossary
 Term | Definition | Example | Notes
