@@ -429,7 +429,15 @@ for (int number : numbers) {
 However, arrays are static, which means that once they are created, their size cannot change.
 
 #### Arraylist
-Arraylists help us fix this issue. Arraylists are dynamic, which means that you can add and remove objects from the Arraylist 
+Arraylists help us fix this issue. Arraylists are dynamic, which means that you can add and remove objects from the list.
+
+```java
+    ArrayList<Integer> list = new ArrayList<>();
+         
+    list.add(1);
+    list.add(2);
+    list.add(3);
+```
 
 # Glossary
 Term | Definition | Example | Notes
