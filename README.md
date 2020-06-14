@@ -101,6 +101,29 @@ git merge origin/master
 # Java
 Java is a programming language that has been around since 1995 that is mainly used for backend applications. Java programs are run on the Java Virtual Machine (JVM) which allows it to be built/compiled once, regardless of the end users operating system. 
 
+## Hello World
+Writing a program that outputs "Hello World" is typically what programmers do when they try to learn something new. In Java, this generally looks like the code below:
+
+#### **`Application.java`**
+```java
+public class Application {
+   public static void main(String[] args) {
+      System.out.println("Hello World")
+   }
+}
+```
+Let's quickly dissect this line by line to get a general understanding of how to run a program.
+
+1. `public class Application {`
+    - Without going into too much detail about classes, know that every class should be in its own source file. This line defines that the `Application` class is living in this source file. Generally speaking, only one `public class <NAME> {` line will be in each `.java` file
+2. `public static void main(String[] args) {`
+    - There is a lot to take in here, but to start, this is just a good line to memorize as every program will have this. This is called our `main` method, and it tells Java where your code starts when you run your app. Make sure you remember the spelling and capitalization of this line - it's very important!
+3. `System.out.println("Hello World")
+    - This line is what outputs (or "prints") `Hello World` to the console. `System.out.println(<ANYTHING>)` is very useful in testing and debugging, especially as you first learn how to code. As you learn new material or get curious about how things within Java interact, feel free to toss it into a `System.out.println()` to see what it'll print out!
+4. `}` 
+    - Make sure you close your brackets and parentheses! Every `(` must have a corresponding `)` and every `{` must have a corresponding `}`. Parentheses and brackets are used to define code being a part of another chunk of code. In our `Hello World` example, the `main` method a part of the `Application` class, `System.out.println("Hello World")` is part of the `main` method, and `"Hello World"` is part of the `System.out.println()` method.
+    - It may be a bit confusing when to use parentheses and when to use brackets, but don't worry! IntelliJ will let you know when you're wrong. Also, you'll get better at knowing when each is appropriate over time.
+
 ## Variables, Data Types, and Math Operators
 
 ### Variables
@@ -256,7 +279,7 @@ Logical operators are used to determine logic of comparisons and values. Like co
 | Symbol  | Name | Example | Example value | 
 | ------  | ---- | ------- | --- |
 | &&      | And  | 1 < 2 && 2 < 3 | true |
-| ||      | Or   | 1 < 2 || 2 > 3 | true | 
+| \|\|      | Or   | 1 < 2 \|\| 2 > 3 | true | 
 | !       | Not  | !(1 > 2 && 2 > 3)| true |
 
 
