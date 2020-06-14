@@ -280,7 +280,7 @@ Logical operators are used to determine logic of comparisons and values. Like co
 | !       | Not  | !(1 > 2 && 2 > 3)| true |
 
 # Control Flow
-Statesments inside your code are usually ran from top to bottom. Control flow statements help to change the flow of execution.
+Statements inside your code are usually ran from top to bottom. Control flow statements help to change the flow of execution.
 
 Three different types of control flow statements in Java (only included commonly used ones):
 
@@ -397,6 +397,39 @@ public static boolean isEven(int num) {
   System.out.println("This line will never get printed");
 }
 ```
+
+## Collections
+There are many types of collections in Java, we'll only go over a few here. 
+
+#### Arrays
+Arrays are a group of like-typed variables that are referred to by a common name. Here is an example of an array of integers from 1 to 10:
+```java
+int[] numbers = {1,2,3,4,5,6,7,8,9,10};
+```
+Arrays allow us to process multiple items at the same time. Instead of writing
+```java
+int a = 1;
+int b = 2;
+int c = 3;
+int d = 4;
+System.out.println(a);
+System.out.println(b);
+System.out.println(c);
+System.out.println(d);
+```
+we can write
+```java
+int[] numbers = {1,2,3,4};
+for (int number : numbers) {
+  System.out.println(number);
+}
+```
+- **Note**: This is a special way of writing a for loop to iterate over a collection of items.
+
+However, arrays are static, which means that once they are created, their size cannot change.
+
+#### Arraylist
+Arraylists help us fix this issue. Arraylists are dynamic, which means that you can add and remove objects from the Arraylist 
 
 # Glossary
 Term | Definition | Example | Notes
