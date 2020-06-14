@@ -1,8 +1,6 @@
 # Intro to Programming
 
 ## Table of Contents
-- [Intro to Programming](#intro-to-programming)
-  * [Table of Contents](#table-of-contents)
   * [Tools/Setup:](#tools-setup-)
     + [Tools to install](#tools-to-install)
     + [Git](#git)
@@ -10,6 +8,8 @@
       - [Git Commands](#git-commands)
       - [Git Cheatsheet](#git-cheatsheet)
 - [Java](#java)
+  * [Hello World](#hello-world)
+      - [**`Application.java`**](#---applicationjava---)
   * [Variables, Data Types, and Math Operators](#variables--data-types--and-math-operators)
     + [Variables](#variables)
   * [Types](#types)
@@ -24,10 +24,7 @@
     + [Additional Resources](#additional-resources)
 - [Glossary](#glossary)
 - [Additional Resources](#additional-resources-1)
-
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
-
-
+- [Credits](#credits)
 ## Tools/Setup:
 
 ### Tools to install
@@ -301,6 +298,5 @@ version control| system that records changes to a file or set of files over time
  Extra practice writing Java methods.
  
  # Credits
- - Lot of this was taken from Target's internal Java resources.
- 
- 
+ - Lot of this was taken from Target's internal Java resources. 
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
