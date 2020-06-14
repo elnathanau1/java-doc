@@ -48,9 +48,9 @@ While not necessary in learning how to program, Git is essential in becoming a g
 #### Basic Terms
 - Repository (repo): location where code and projects are stored in Git.
 - Commit: individual change to a file (or set of files). This is how Github keeps track of which changes were made when and by who
-- Merge conflict: When two people attempt to edit the same code file. Github can try to auto resolve these, however if they are complicated, they can be resolved in IntelliJ
-- Branch: A set of code changes with a unique name. The main branch in every project is called `master`. `master` is typically production-ready code, so try not to push broken code into it.
-- Pull Request (PR): A request to merge the code changes from a branch into `master`.
+- Merge conflict: when two people attempt to edit the same code file. Github can try to auto resolve these, however if they are complicated, they can be resolved in IntelliJ
+- Branch: a set of code changes with a unique name. The main branch in every project is called `master`. `master` is typically production-ready code, so try not to push broken code into it.
+- Pull Request (PR): a request to merge the code changes from a branch into `master`.
 - `.gitignore`: This is a file where you can put the names of other files/directories that you don't want Git to track changes for.
 
 
@@ -279,12 +279,124 @@ Logical operators are used to determine logic of comparisons and values. Like co
 | \|\|      | Or   | 1 < 2 \|\| 2 > 3 | true | 
 | !       | Not  | !(1 > 2 && 2 > 3)| true |
 
+# Control Flow
+Statesments inside your code are usually ran from top to bottom. Control flow statements help to change the flow of execution.
 
-### Additional Resources
+Three different types of control flow statements in Java (only included commonly used ones):
 
-- https://www.w3schools.com/java/java_operators.asp
-- https://www.tutorialspoint.com/java/java_basic_operators.htm
+- Decision making statements:  if, else, else-if
+- Looping statements: for, while
+- Branching statements: break, continue, return
 
+### Decision making statements
+
+#### if
+The if statement tells your program to execute a certain section of code only if the condition is true.
+```java
+if (number % 2 == 0) {
+  System.out.println("The number is even.");
+}
+```
+For example, in the above, the statement is printed only if the number is divisible by 2. 
+
+#### else
+The else statement is ran when an "if" condition is false.
+```java
+if (number % 2 == 0) {
+  System.out.println("The number is even.");
+} else {
+  System.out.println("The number is odd.");
+}
+```
+In the above example, it prints that the number is even, if the number is divisible by 2, else it prints that the number is odd.
+
+#### else-if
+Sometimes we want to check a different condition after the `if` condition fails. 
+```java
+if (number <= 0) {
+  System.out.println("Please enter a valid positive number.");
+} else if (number % 2 == 0) {
+  System.out.println("The number is even.");
+} else {
+  System.out.println("The number is odd.");
+}
+```
+**Note**: else-if statements chained together go top down - if one condition is satisfied, the conditions after it aren't checked.
+
+### Looping statements
+#### for
+The for statement loops until a particular condition is satisfied.
+```java
+for (initialization; termination; increment) {
+    statement(s)
+}
+```
+- The initialization expression creates the loop. It is only ran once when the loop begins.
+- The termination expression stops the loop when it becomes false.
+- The increment expression is ran at the end of each iteration through the loop.
+
+```java
+System.out.println("Printing numbers 1 to 10.");
+for (int count = 0; count <=10 ; count++) {
+    System.out.println(count);
+}
+```
+
+#### while
+The while loop executes a set of statements while a certain conditions is true. The while statement evaluates expression, which must return a boolean value. If the expression evaluates to true, the while statement executes the statement(s) in the while block. The while statement continues testing the expression and executing its block until the expression evaluates to false. 
+```java
+int count = 1;
+while (count <= 10) {
+  System.out.println(count);
+  count++;
+}                                                                                
+```
+
+### Branching statements
+
+#### break
+The break statement stops the innermost loop that it is in.
+
+```java
+for (int i=1; i<=5; i++){
+  if (i==3) {
+    System.out.println("Breaking the for loop.");
+    break;
+  }
+  System.out.println("Printing " + i);
+}
+```
+
+#### continue
+The continue statement skips the current iteration of a loop. Note that unlike the break statement, it keeps running the loop from the next iteration instead of stopping it completely.
+```java
+for (int i = 0; i <10; i++) {
+  if (i % 2 != 0) {
+    continue;
+  }
+  System.out.println(i + " is even");
+}
+```
+
+#### return 
+The return statement exits from the current method and gives back a value. For example, the code below will print out `true`, and not `This line will never get printed` because the return statement ends the method and Java never reaches the last line.
+
+```java
+public static void main(String[] args) {
+  int i = 52;
+  bool even = isEven(i);
+  System.out.println(even);
+}
+public static boolean isEven(int num) {
+  if(num % 2 == 0) {
+    return true;
+  }
+  else {
+    return false;
+  }
+  System.out.println("This line will never get printed");
+}
+```
 
 # Glossary
 Term | Definition | Example | Notes
