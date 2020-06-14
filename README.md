@@ -299,4 +299,4 @@ version control| system that records changes to a file or set of files over time
  
  # Credits
  - Lot of this was taken from Target's internal Java resources. 
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+ - <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
