@@ -25,6 +25,20 @@
 ### Git
 While not necessary in learning how to program, Git is essential in becoming a good programmer. Git is the standard for [version control](#glossary)
 
+#### Basic Terms
+- Repository (repo): location where code and projects are stored in Git.
+- Commit: individual change to a file (or set of files). This is how Github keeps track of which changes were made when and by who
+
+
+#### Git Commands
+Command | What it does | Notes
+--- | --- | ---
+`git init` | Create empty Git repo in specified directory | 
+`git clone <repo>` | Downloads a copy of a repo in specified directory |
+`git add <directory>` | Stages all changes in `<directory>` for next commit. `<directory>` can be replaced with <file> to just stage a single file. | `git add .` will stage all files
+`git commit -m "<message>"` | Commit the staged changes, using "<message>" as commit message | Remember to use `-m "<message>"` - otherwise an in-terminal text editor will open. 
+
+
 ## Glossary
 Term | Definition | Example | Notes
 --- | --- | --- | ---
